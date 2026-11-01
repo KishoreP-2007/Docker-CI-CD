@@ -48,6 +48,3 @@ simple-nodejs-web-app/
 - `GET /api/hello` — returns a JSON greeting from the Express server.
 
 
-
-
-sample change 
