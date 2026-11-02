@@ -1,72 +1,147 @@
+
 * {
-  box-sizing: border-box;
-  }
+    box-sizing: border-box;
+}
 
 body {
-margin: 0;
-min-height: 100vh;
-display: grid;
-place-items: center;
-padding: 24px;
-font-family: Arial, sans-serif;
-color: #f8fafc;
-background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e5e7eb;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(36, 150, 237, 0.12), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(36, 150, 237, 0.08), transparent 35%),
+        #0b1120;
 }
+
+/* Main Container */
 
 .card {
-width: min(100%, 480px);
-padding: 44px 36px;
-text-align: center;
-background: #1e293b;
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: 20px;
-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    position: relative;
+    width: min(100%, 500px);
+    padding: 45px 38px;
+    text-align: center;
+
+    background: linear-gradient(145deg, #172337, #101b2e);
+
+    border: 1px solid rgba(36, 150, 237, 0.25);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(36, 150, 237, 0.08);
+
+    transition: all 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(36, 150, 237, 0.55);
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.5),
+        0 0 35px rgba(36, 150, 237, 0.15);
+}
+
+/* Docker Badge */
 
 .badge {
-display: inline-block;
-padding: 8px 14px;
-color: #c4b5fd;
-background: rgba(139, 92, 246, 0.15);
-border: 1px solid rgba(139, 92, 246, 0.3);
-border-radius: 20px;
-font-size: 12px;
-font-weight: 700;
-letter-spacing: 1px;
+    display: inline-block;
+    padding: 9px 16px;
+
+    color: #2496ed;
+    background: rgba(36, 150, 237, 0.12);
+
+    border: 1px solid rgba(36, 150, 237, 0.35);
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
+
+/* Heading */
 
 h1 {
-margin: 22px 0 10px;
-font-size: 40px;
-color: #ffffff;
+    margin: 25px 0 12px;
+
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
+
+/* Subtitle */
 
 .subtitle {
-color: #cbd5e1;
-line-height: 1.7;
+    color: #9caec2;
+    line-height: 1.8;
+    font-size: 15px;
 }
 
+/* Docker Blue Button */
+
 button {
-margin-top: 18px;
-padding: 13px 24px;
-color: #ffffff;
-background: linear-gradient(135deg, #7c3aed, #4f46e5);
-border: none;
-border-radius: 9px;
-font-size: 15px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
+    margin-top: 22px;
+    padding: 14px 28px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #2496ed, #0878ce);
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px rgba(36, 150, 237, 0.2);
+
+    transition: all 0.3s ease;
 }
 
 button:hover {
-transform: translateY(-2px);
-box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+    background: linear-gradient(135deg, #42a5f5, #2496ed);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 9px 25px rgba(36, 150, 237, 0.35);
 }
 
+button:active {
+    transform: translateY(0);
+}
+
+/* Backend Response */
+
 #message {
-min-height: 24px;
-margin-top: 22px;
-color: #a5b4fc;
-overflow-wrap: anywhere;
+    min-height: 24px;
+    margin-top: 25px;
+
+    color: #60b8f5;
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .card {
+        padding: 35px 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
 }
