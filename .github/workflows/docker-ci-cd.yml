@@ -1,4 +1,3 @@
-```yaml
 name: Build and Deploy Node.js App
 
 on:
@@ -74,4 +73,4 @@ jobs:
             fi
 
             echo "Deployment successful!"
-```
+
